@@ -1,4 +1,4 @@
-package com.arifsyncjava.cqrsapi.product.controller;
+package com.arifsyncjava.cqrsapi.product;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.RequestMapping;

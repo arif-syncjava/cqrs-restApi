@@ -1,4 +1,4 @@
-package com.arifsyncjava.cqrsapi.product.model;
+package com.arifsyncjava.cqrsapi.category;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
