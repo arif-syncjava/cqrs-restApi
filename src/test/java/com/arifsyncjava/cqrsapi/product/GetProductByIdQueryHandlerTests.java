@@ -3,7 +3,7 @@ package com.arifsyncjava.cqrsapi.product;
 import com.arifsyncjava.cqrsapi.ApplicationTests;
 import com.arifsyncjava.cqrsapi.category.Category;
 import com.arifsyncjava.cqrsapi.exceptions.ProductNotFoundException;
-import com.arifsyncjava.cqrsapi.product.commandhandler.GetProductByIdQueryHandler;
+import com.arifsyncjava.cqrsapi.product.queryhandler.GetProductByIdQueryHandler;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;

@@ -1,4 +1,4 @@
-package com.arifsyncjava.cqrsapi.product.commandhandler;
+package com.arifsyncjava.cqrsapi.product.queryhandler;
 
 import com.arifsyncjava.cqrsapi.Query;
 import com.arifsyncjava.cqrsapi.exceptions.ProductNotFoundException;
