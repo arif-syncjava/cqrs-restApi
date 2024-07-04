@@ -1,0 +1,20 @@
+spring:
+      application:
+            name: Restful Api with CQRS design pattern
+            version: 1.0.0
+      datasource:
+            url: jdbc:postgresql://localhost:5432/db1
+            username: postgres
+            password: 1234
+
+      jpa:
+            generate-ddl: true
+            hibernate:
+                  ddl-auto: update
+      sql:
+            init:
+                  mode: always
+                  continue-on-error: false
+                  data-locations:
+                        - classpath:/data.sql
+

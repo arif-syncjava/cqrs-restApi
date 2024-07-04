@@ -16,8 +16,8 @@ import java.time.LocalDateTime;
 @Table (name = "products")
 public class Product {
     @Id
+    @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
     @GeneratedValue (generator = "UUID")
-    @GenericGenerator(name = "UUID", strategy = "org.hibernate.UUIDGenerator")
     private String id;
     private String name;
     private String description;
