@@ -58,6 +58,7 @@ public class GetProductByIdQueryHandlerTests {
         assertEquals(exception.getStatus(), HttpStatus.NOT_FOUND);
 
 
+
     }
 
 

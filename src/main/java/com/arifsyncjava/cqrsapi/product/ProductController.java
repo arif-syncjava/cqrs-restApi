@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 @RequiredArgsConstructor
 public class ProductController {
@@ -17,6 +19,11 @@ public class ProductController {
     @GetMapping (path = "/products/{id}")
     public ResponseEntity<ProductDTO> getProductById (@PathVariable String id) {
         return getProductByIdQueryHandler.execute(id);
+    }
+
+    @GetMapping(path = "/products")
+    public ResponseEntity<List<ProductDTO>> getProducts () {
+
     }
 
 
