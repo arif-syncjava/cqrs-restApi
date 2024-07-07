@@ -16,7 +16,7 @@ import org.springframework.web.client.RestTemplate;
 
 import java.util.function.Consumer;
 
-@Component
+
 public class ProfanityValidator {
 //
 // @Bean

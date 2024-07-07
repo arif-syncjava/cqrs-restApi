@@ -5,10 +5,7 @@ import com.arifsyncjava.cqrsapi.product.queryhandler.GetProductByIdQueryHandler;
 import com.arifsyncjava.cqrsapi.product.validation.CreateProductRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequiredArgsConstructor
@@ -29,6 +26,11 @@ public class ProductController {
     public ResponseEntity<ProductDTO> getProductById (@PathVariable String id) {
         return getProductByIdQueryHandler.execute(id);
     }
+
+    @PutMapping
+    public ResponseEntity<ProductDTO> updateProduct
+
+
 
 //    @GetMapping(path = "/products")
 //    @Cacheable ("products")

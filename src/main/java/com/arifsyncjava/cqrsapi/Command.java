@@ -8,8 +8,7 @@ import org.springframework.http.ResponseEntity;
 import java.util.List;
 
 public interface Command <I,O> {
+
     ResponseEntity<O> execute (I input);
 
-    ResponseEntity<ProductDTO> execute(
-            CreateProductRequest request, List<Category> availableCategories);
 }

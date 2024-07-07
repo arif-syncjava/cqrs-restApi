@@ -44,7 +44,8 @@ public class ProductValidator {
 
         }
 
-        if (ProfanityValidator.hasProfanity()) {
+        if (ProfanityValidator.hasProfanity(
+                request.getName(), request.getDescription())) {
             throw new InvalidProductException(
                     new SimpleResponse(
                             ErrorMessage.PRODUCT_HAS_PROFANITY.getMessage()), request);
