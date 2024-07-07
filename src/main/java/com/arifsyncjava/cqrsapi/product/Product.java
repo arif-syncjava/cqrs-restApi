@@ -4,6 +4,7 @@ import com.arifsyncjava.cqrsapi.enums.Region;
 import com.arifsyncjava.cqrsapi.category.Category;
 import jakarta.persistence.*;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.GenericGenerator;
@@ -11,6 +12,7 @@ import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.LocalDateTime;
 
+@NoArgsConstructor
 @Getter @Setter
 @Entity
 @Table (name = "products")
@@ -36,5 +38,23 @@ public class Product {
     private LocalDateTime createdAt;
     @UpdateTimestamp
     private LocalDateTime updatedAt;
+
+    public Product (CreateProductRequest request) {
+        this.name = request.getName();
+        this.description = request.getDescription();
+        this.manufacturer = request.getManufacturer();
+        this.price = request.getPrice();
+        this.category = new Category(request.getCategory());
+        this.region =Region.valueOf(request.getRegion());
+    }
+
+
+
+
+
+
+
+
+
 
 }

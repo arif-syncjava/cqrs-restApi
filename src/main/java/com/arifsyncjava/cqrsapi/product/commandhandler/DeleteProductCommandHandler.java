@@ -11,11 +11,15 @@ import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
-@RequiredArgsConstructor
+
 @Service
 public class DeleteProductCommandHandler implements Command<String,Void> {
 
     private final ProductRepository productRepository;
+
+    public DeleteProductCommandHandler(ProductRepository productRepository) {
+        this.productRepository = productRepository;
+    }
 
 
     @Override

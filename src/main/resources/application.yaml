@@ -6,12 +6,11 @@ spring:
             url: jdbc:postgresql://localhost:5432/db1
             username: postgres
             password: 1234
-
       jpa:
+            open-in-view: false
             generate-ddl: true
             hibernate:
                   ddl-auto: update
-
       output:
             ansi:
                   enabled: ALWAYS
