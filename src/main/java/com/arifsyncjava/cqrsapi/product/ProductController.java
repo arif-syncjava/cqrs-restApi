@@ -2,6 +2,7 @@ package com.arifsyncjava.cqrsapi.product;
 
 import com.arifsyncjava.cqrsapi.product.commandhandler.CreateProductCommandHandler;
 import com.arifsyncjava.cqrsapi.product.queryhandler.GetProductByIdQueryHandler;
+import com.arifsyncjava.cqrsapi.product.validation.CreateProductRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

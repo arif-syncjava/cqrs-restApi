@@ -2,6 +2,7 @@ package com.arifsyncjava.cqrsapi.product;
 
 import com.arifsyncjava.cqrsapi.enums.Region;
 import com.arifsyncjava.cqrsapi.category.Category;
+import com.arifsyncjava.cqrsapi.product.validation.CreateProductRequest;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

@@ -1,6 +1,6 @@
 package com.arifsyncjava.cqrsapi.exceptions;
 
-import com.arifsyncjava.cqrsapi.product.CreateProductRequest;
+import com.arifsyncjava.cqrsapi.product.validation.CreateProductRequest;
 import org.springframework.http.HttpStatus;
 
 public class InvalidProductException extends CustomBaseException{

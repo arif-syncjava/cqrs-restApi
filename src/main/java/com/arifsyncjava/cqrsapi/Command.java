@@ -1,7 +1,7 @@
 package com.arifsyncjava.cqrsapi;
 
 import com.arifsyncjava.cqrsapi.category.Category;
-import com.arifsyncjava.cqrsapi.product.CreateProductRequest;
+import com.arifsyncjava.cqrsapi.product.validation.CreateProductRequest;
 import com.arifsyncjava.cqrsapi.product.ProductDTO;
 import org.springframework.http.ResponseEntity;
 

@@ -2,7 +2,7 @@ package com.arifsyncjava.cqrsapi.product.commandhandler;
 
 import com.arifsyncjava.cqrsapi.Command;
 import com.arifsyncjava.cqrsapi.category.Category;
-import com.arifsyncjava.cqrsapi.product.CreateProductRequest;
+import com.arifsyncjava.cqrsapi.product.validation.CreateProductRequest;
 import com.arifsyncjava.cqrsapi.product.ProductDTO;
 import com.arifsyncjava.cqrsapi.product.ProductRepository;
 import lombok.RequiredArgsConstructor;
@@ -18,14 +18,12 @@ public class CreateProductCommandHandler
 
     private final ProductRepository productRepository;
 
-    @Override
-    public ResponseEntity<ProductDTO> execute(CreateProductRequest input) {
-        return null;
-    }
+
 
     @Override
     public ResponseEntity<ProductDTO> execute(
             CreateProductRequest request, List<Category> availableCategories) {
+        return null;
 
     }
 

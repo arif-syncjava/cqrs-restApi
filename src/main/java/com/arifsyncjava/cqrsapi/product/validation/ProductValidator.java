@@ -1,7 +1,11 @@
-package com.arifsyncjava.cqrsapi.product;
+package com.arifsyncjava.cqrsapi.product.validation;
 
 import com.arifsyncjava.cqrsapi.category.Category;
+import com.arifsyncjava.cqrsapi.enums.ErrorMessage;
 import com.arifsyncjava.cqrsapi.enums.Region;
+import com.arifsyncjava.cqrsapi.exceptions.InvalidProductException;
+import com.arifsyncjava.cqrsapi.exceptions.SimpleResponse;
+import com.arifsyncjava.cqrsapi.product.Product;
 import org.springframework.util.StringUtils;
 
 import java.util.List;
@@ -12,16 +16,38 @@ public class ProductValidator {
                                   List<Category> availableCategories) {
 
         if (nameIsEmpty(request.getName())) {
+            throw new InvalidProductException(
+                    new SimpleResponse(
+                            ErrorMessage.PRODUCT_NOT_FOUND.getMessage()), request);
+
 
         }
         if (priceIsNegative(request.getPrice())) {
+            throw new InvalidProductException(
+                    new SimpleResponse(
+                            ErrorMessage.PRODUCT_NOT_FOUND.getMessage()), request);
+
 
         }
         if (categoryNotAvailable(request.getCategory(), availableCategories)) {
+            throw new InvalidProductException(
+                    new SimpleResponse(
+                            ErrorMessage.PRODUCT_NOT_FOUND.getMessage()), request);
+
 
         }
 
         if (regionIsNotAvailable(request.getRegion())) {
+            throw new InvalidProductException(
+                    new SimpleResponse(
+                            ErrorMessage.PRODUCT_NOT_FOUND.getMessage()), request);
+
+        }
+
+        if (ProfanityValidator.hasProfanity()) {
+            throw new InvalidProductException(
+                    new SimpleResponse(
+                            ErrorMessage.PRODUCT_HAS_PROFANITY.getMessage()), request);
 
         }
 

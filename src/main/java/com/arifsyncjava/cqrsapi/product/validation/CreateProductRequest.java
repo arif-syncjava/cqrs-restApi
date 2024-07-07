@@ -1,7 +1,5 @@
-package com.arifsyncjava.cqrsapi.product;
+package com.arifsyncjava.cqrsapi.product.validation;
 
-import com.arifsyncjava.cqrsapi.category.Category;
-import com.arifsyncjava.cqrsapi.enums.Region;
 import lombok.Getter;
 import lombok.Setter;
 
